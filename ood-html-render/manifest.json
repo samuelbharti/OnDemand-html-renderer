@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Render OOD HTML",
+  "version": "0.1",
+  "description": "Render raw HTML shown by Open OnDemand as real HTML.",
+  "host_permissions": [
+    "https://ondemand.example.edu/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ondemand.example.edu/pun/sys/dashboard/files/fs/*"
+      ],
+      "js": ["render-html.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
